@@ -1,46 +1,101 @@
-# Getting Started with Create React App
+# tela-login-typescript-Dio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto, denominado `tela-login-typescript-Dio`, é uma aplicação web construída com React e TypeScript. Ele foi desenvolvido para demonstrar uma tela de login interativa e estilizada.
 
-## Available Scripts
+## 🛠️Tecnologias Utilizadas
 
-In the project directory, you can run:
+O projeto faz uso das seguintes tecnologias e bibliotecas:
 
-### `npm start`
+  * **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+  * **TypeScript**: Superconjunto tipado do JavaScript que compila para JavaScript puro.
+  * **Styled Components**: Para estilização de componentes, permitindo escrever CSS dentro do JavaScript.
+  * **React Hook Form**: Para gerenciamento de formulários com validação simplificada.
+  * **Yup**: Um construtor de esquemas para análise e validação de valores.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🏗️ Estrutura do Projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A estrutura do projeto segue uma organização modular, com componentes reutilizáveis e páginas dedicadas:
 
-### `npm test`
+```
+gustavo-mmh/tela-login-typescript-dio/tela-login-typescript-Dio-e287141e57338a42fb1fefe62b1834480ef68c28/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   └── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── components/
+│   │   ├── Button/
+│   │   │   ├── index.tsx
+│   │   │   ├── styles.ts
+│   │   │   └── types.ts
+│   │   └── Input/
+│   │       ├── index.tsx
+│   │       ├── styles.ts
+│   │       └── types.ts
+│   ├── pages/
+│   │   └── Login/
+│   │       ├── index.tsx
+│   │       ├── styles.ts
+│   │       └── types.ts
+│   ├── global.ts
+│   ├── index.tsx
+│   └── react-app-env.d.ts
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── tsconfig.json
+└── yarn.lock
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * `public/`: Contém arquivos estáticos como o `index.html` e ícones.
+  * `src/`: Contém o código-fonte da aplicação.
+      * `components/`: Abriga componentes reutilizáveis como `Button` e `Input`, cada um com seus próprios arquivos de lógica (`index.tsx`), estilos (`styles.ts`) e definições de tipo (`types.ts`).
+      * `pages/`: Contém as páginas principais da aplicação, como a página de `Login`.
+      * `global.ts`: Define estilos globais para a aplicação.
+      * `index.tsx`: O ponto de entrada principal da aplicação React.
+  * `package.json` e `package-lock.json`: Gerenciamento de dependências do projeto.
+  * `tsconfig.json`: Configurações do compilador TypeScript.
+  * `.gitignore`: Arquivos e diretórios a serem ignorados pelo controle de versão.
+  * `yarn.lock`: Garante a consistência das dependências entre diferentes ambientes.
 
-### `npm run build`
+## 📌Funcionalidades
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A aplicação consiste em uma tela de login com os seguintes elementos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  * **Campos de Entrada**: Inputs para e-mail e senha com estilização personalizada.
+      * Validação em tempo real utilizando React Hook Form e Yup, exibindo mensagens de erro para e-mail inválido e senha com menos de 6 caracteres.
+  * **Botão de Login**: Um botão estilizado para submissão do formulário.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Instalação e Execução
 
-### `npm run eject`
+Para configurar e rodar o projeto localmente:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1.  **Clone o repositório**:
+    `git clone <URL_DO_REPOSITÓRIO>`
+    `cd tela-login-typescript-dio`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.  **Instale as dependências**:
+    `npm install` ou `yarn install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3.  **Inicie a aplicação**:
+    `npm start` ou `yarn start`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    A aplicação será iniciada em `http://localhost:3000`.
 
-## Learn More
+## Scripts Disponíveis
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+No diretório do projeto, você pode executar:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  * `npm start`: Inicia o aplicativo em modo de desenvolvimento. A página será recarregada se você fizer edições e você verá quaisquer erros de lint no console.
+  * `npm test`: Inicia o `test runner` em modo de observação interativa.
+  * `npm run build`: Compila o aplicativo para produção na pasta `build`. Ele otimiza o build para o melhor desempenho.
+  * `npm run eject`: Essa é uma operação unidirecional. O comando removerá a única dependência de build do seu projeto e copiará todos os arquivos de configuração e as dependências transitivas (webpack, Babel, ESLint, etc.) diretamente para o seu projeto, dando-lhe controle total sobre eles.
+
+## 📖 Aprender Mais
+
+Você pode aprender mais sobre como criar aplicativos React em [Create React App documentation](https://create-react-app.dev/docs/getting-started).
+
+Para saber como implantar, visite [deployment documentation](https://create-react-app.dev/docs/deployment).
